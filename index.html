@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>good night nana 🌙</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+
+    font-family:Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 50% 20%, #27345f 0%, transparent 35%),
+        linear-gradient(180deg,#090d24,#151936,#25213d);
+
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* =====================
+   BINTANG
+===================== */
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+
+    opacity:.6;
+
+    animation:
+        twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.2;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.4);
+    }
+
+}
+
+
+/* =====================
+   BULAN
+===================== */
+
+.moon{
+
+    position:absolute;
+
+    top:12%;
+    right:12%;
+
+    width:85px;
+    height:85px;
+
+    border-radius:50%;
+
+    background:#fff8d6;
+
+    box-shadow:
+        0 0 20px rgba(255,248,214,.5),
+        0 0 60px rgba(255,248,214,.2);
+
+    animation:
+        moonFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes moonFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-7px);
+    }
+
+}
+
+
+/* =====================
+   AWAN
+===================== */
+
+.cloud{
+
+    position:absolute;
+
+    color:#ffffff;
+
+    opacity:.12;
+
+    font-size:55px;
+
+    animation:cloudMove 18s linear infinite;
+
+}
+
+.cloud.one{
+    top:20%;
+    left:-100px;
+}
+
+.cloud.two{
+    bottom:20%;
+    left:-150px;
+    font-size:40px;
+    animation-delay:7s;
+}
+
+@keyframes cloudMove{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(120vw);
+    }
+
+}
+
+
+/* =====================
+   CARD
+===================== */
+
+.card{
+
+    position:relative;
+
+    width:88%;
+    max-width:390px;
+
+    padding:38px 28px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:32px;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.3);
+
+    animation:appear 1.2s ease;
+
+}
+
+@keyframes appear{
+
+    from{
+        opacity:0;
+        transform:translateY(25px) scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+
+/* =====================
+   KARAKTER
+===================== */
+
+.character{
+
+    font-size:42px;
+
+    margin-bottom:18px;
+
+    animation:
+        sleep 3s ease-in-out infinite;
+
+}
+
+@keyframes sleep{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+}
+
+
+/* =====================
+   TEXT
+===================== */
+
+.small{
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    color:#aeb8dc;
+
+    margin-bottom:10px;
+
+}
+
+h1{
+
+    font-size:38px;
+
+    color:#fff4c7;
+
+    margin-bottom:18px;
+
+    text-shadow:
+        0 0 18px rgba(255,244,199,.25);
+
+}
+
+.message{
+
+    min-height:130px;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    color:#dfe3f5;
+
+}
+
+
+/* =====================
+   BUTTON
+===================== */
+
+button{
+
+    margin-top:20px;
+
+    padding:11px 22px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:rgba(255,248,214,.12);
+
+    border:1px solid rgba(255,248,214,.2);
+
+    color:#fff4c7;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:scale(1.06);
+
+    background:rgba(255,248,214,.2);
+
+}
+
+
+/* =====================
+   EMOJI TURUN
+===================== */
+
+.emoji{
+
+    position:absolute;
+
+    bottom:-30px;
+
+    font-size:20px;
+
+    pointer-events:none;
+
+    animation:floatUp 6s linear forwards;
+
+}
+
+@keyframes floatUp{
+
+    0%{
+        opacity:0;
+        transform:translateY(0) rotate(0);
+    }
+
+    15%{
+        opacity:.8;
+    }
+
+    100%{
+        opacity:0;
+        transform:
+            translateY(-100vh)
+            rotate(15deg);
+    }
+
+}
+
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer{
+
+    position:absolute;
+
+    bottom:18px;
+
+    font-size:10px;
+
+    color:#7f87aa;
+
+    letter-spacing:2px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="moon"></div>
+
+<div class="cloud one">☁</div>
+<div class="cloud two">☁</div>
+
+
+<div class="card">
+
+    <div class="character">
+        ( ˘ω˘ ) zzz...
+    </div>
+
+    <div class="small">
+        BEFORE YOU SLEEP
+    </div>
+
+    <h1>good night, nana sayaang🌙</h1>
+
+    <div class="message" id="message">
+
+        malam ini nggak perlu mikirin
+        semuanya dulu ya...
+
+        <br><br>
+
+        taruh semua capeknya di sini,
+        besok kita pikirin lagi. ☁️
+
+    </div>
+
+    <button onclick="nextMessage()">
+        satu pesan lagi...
+    </button>
+
+</div>
+
+
+<div class="footer">
+    sleep well, dream softly ♡
+</div>
+
+
+<script>
+
+/* =====================
+   PESAN
+===================== */
+
+const messages = [
+
+`
+malam ini nggak perlu mikirin
+semuanya dulu ya...
+
+<br><br>
+
+taruh semua capeknya di sini,
+besok kita pikirin lagi. ☁️
+`,
+
+`
+nanaa sayaang...
+
+<br><br>
+
+semoga malam ini
+kepalamu sedikit lebih tenang,
+hatimu sedikit lebih ringan,
+dan tidurnya lebih nyaman. 🌙
+`,
+
+`
+kalau hari ini berat banget,
+nggak apa-apa.
+
+<br><br>
+
+kamu sudah melewati hari ini,
+dan itu sudah cukup. 🤍
+`,
+
+`
+sekarang waktunya merem...
+
+<br><br>
+
+nggak usah mikirin chat,
+tugas,
+masalah,
+atau hal-hal random jam 2 pagi 😭
+`,
+
+`
+semoga nanti mimpinya indahh.
+
+<br><br>
+
+kalau bisa,
+jangan mimpi dikejar tugas sekolah
+lagi ya naana sayaang 😭☁️
+`,
+
+`
+good night, Nana.
+
+<br><br>
+
+semoga tidurmu nyenyak,
+bangun dengan hati yang lebih ringan,
+dan besok ada hal kecil
+yang bikin kamu senyum. 🌷
+`
+
+];
+
+
+let index = 0;
+
+
+function nextMessage(){
+
+    index++;
+
+    if(index >= messages.length){
+
+        index = 0;
+
+    }
+
+    document.getElementById("message").innerHTML =
+        messages[index];
+
+    createEmoji();
+
+}
+
+
+/* =====================
+   EMOJI
+===================== */
+
+function createEmoji(){
+
+    const emojis = [
+        "🌙",
+        "⭐",
+        "☁️",
+        "💤",
+        "✨",
+        "🤍"
+    ];
+
+    const e =
+        document.createElement("div");
+
+    e.className = "emoji";
+
+    e.innerText =
+        emojis[
+            Math.floor(
+                Math.random()*emojis.length
+            )
+        ];
+
+    e.style.left =
+        (Math.random()*90 + 5)+"vw";
+
+    e.style.animationDuration =
+        (5 + Math.random()*3)+"s";
+
+    document.body.appendChild(e);
+
+    setTimeout(()=>{
+
+        e.remove();
+
+    },8000);
+
+}
+
+
+/* =====================
+   BINTANG RANDOM
+===================== */
+
+for(let i=0;i<55;i++){
+
+    const star =
+        document.createElement("div");
+
+    star.className="star";
+
+    star.style.left =
+        Math.random()*100+"vw";
+
+    star.style.top =
+        Math.random()*100+"vh";
+
+    star.style.animationDelay =
+        Math.random()*3+"s";
+
+    document.body.appendChild(star);
+
+}
+
+
+/* emoji sesekali */
+
+setInterval(createEmoji,2500);
+
+</script>
+
+</body>
+</html>
